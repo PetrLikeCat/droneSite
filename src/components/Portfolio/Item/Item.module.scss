@@ -1,0 +1,38 @@
+.item {
+  display: flex;
+  max-width: 1170px;
+  grid-column-gap: 105px;
+  margin-bottom: 100px;
+  height: 250px;
+  &__body {
+    width: 50%;
+
+    &__base {
+      width: 90%;
+      margin-bottom: 50px;
+    }
+    &__subTitle {
+      font-size: 16px;
+      line-height: 1.5em;
+      color: #162cca;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    &__text {
+      color: #717171;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5em;
+    }
+  }
+
+  &__img {
+    img{
+      width: 520px;
+      height: 250px;
+      object-fit: cover;
+    }
+  }
+}
+//162cca

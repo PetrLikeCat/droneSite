@@ -1,0 +1,211 @@
+@import url("../var.scss");
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Поместите видео под остальными элементами */
+}
+
+.video-background video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover; /* Сохранить соотношение сторон и заполнить контейнер */
+}
+
+header {
+  width: 100%;
+  height: 100%;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  .header-menu__wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 64px;
+    width: 1200px;
+    margin-top: 20px;
+    padding: 5px;
+    padding-left: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+  }
+  .header__logo {
+    max-width: 100px;
+    height: 21px;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+
+    &-list {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      &__item {
+        margin-right: 20px;
+        font-size: 16px;
+        color: #fff;
+        text-transform: capitalize;
+        transition: 1s;
+      }
+      :hover {
+        color: #162cca;
+      }
+    }
+  }
+
+  // Стили для кнопки "Get in Touch"
+  .header-btn {
+    display: flex;
+    text-align: center;
+    &__cart {
+      position: relative;
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      margin-right: 35px;
+      margin-top: 18px;
+      a {
+        margin: 0;
+      }
+      img {
+        width: 24px;
+        height: 24px;
+        // margin-top: 30px; // Применяется только к изображению
+      }
+      span {
+        position: absolute;
+        left: 26px;
+        top: -7px;
+        color: #fff;
+        font-size: 11px;
+      }
+    }
+    &__touch {
+      button {
+        background-color: #ffffff;
+        color: #162cca;
+        border: none;
+        padding: 16px 28px;
+        cursor: pointer;
+        font-size: 18px;
+        border: 1px solid #fff;
+        border-radius: 6px;
+        font-weight: 500;
+        transition: all 0.3s;
+        text-align: center;
+        &:hover {
+          color: #fff;
+          background-color: #162cca;
+          border-color: #162cca;
+        }
+      }
+    }
+  }
+}
+
+.header-title {
+  display: flex;
+  // flex-direction: column;
+  // justify-content: flex-end;
+  min-height: 100vh;
+  // flex: 1;
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    margin-top: auto;
+    max-width: 1200px;
+    align-items: center;
+    margin-bottom: 180px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1 {
+    font-size: 100px;
+    color: #fff;
+    line-height: 1.1em;
+  }
+  &__text {
+    width: 40%;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    p {
+      padding: 0;
+      margin: 0;
+      margin-bottom: 50px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.5em;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    border: none;
+    border-radius: 15px;
+    width: 93%;
+    a { 
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.1em;
+      white-space: nowrap;
+      padding: 16px 28px 16px 28px;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+      color: #0e0e0e;
+      span {
+        display: inline-block;
+        width: 40px;
+        height: 10px;
+        color: rgba(0, 0, 0, 0);
+        background-image: url("https://assets-global.website-files.com/6450b31696e25f8aa6cdd7b0/64521e18ef457114a59b9fb1_link%20arrow.svg");
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: auto;
+        margin-top: 4px;
+        margin-left: 50px;
+        font-family: "Fa solid 900", sans-serif;
+        font-size: 13px;
+        line-height: 1;
+      }
+    }
+    :hover {
+      transition: .3s;
+      color: #162cca;
+      
+      span {
+        transition: .4s;
+        width: 55px;
+      }
+    }
+  }
+}
+
+.zero{
+  a{
+    padding: 0;
+  }
+}
+.nav-button{
+  display: none;
+}
+@media screen and (max-width:1200px) {
+  header .menu{
+    
+    display: none;
+  }
+  .nav-button{
+    display: block;
+  }
+}
